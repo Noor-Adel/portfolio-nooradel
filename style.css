@@ -36,16 +36,18 @@ header{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background: transparent;
+    /* background: transparent; */
     background: rgb(255,252,248);
-    padding: 22px 15%;
-    border-bottom: 1px solid transparent;
+    padding: 13px 10%;
     transition: all .45s ease;
+    box-shadow: -3px -3px 7px #f4f4f473 ,
+                2px 2px 5px rgba(126, 114, 97, 0.288);
+   margin-bottom: 100px;
     
 }
 .logo{
     color: var(--text-color);
-    font-size: 35px;
+    font-size: 1.61rem;
     font-weight: 700;
     letter-spacing: 1px;
     
@@ -58,10 +60,11 @@ span{
    display: flex; 
 }
 .navlist a{
-    color: var(--second-color);
-    font-size: 25px;
+    color: var(--text-color);
+    font-size: 1.3rem;
     font-weight: 500;
-    margin: 0px 25px;
+    padding: 10px 20px;
+   
     transition: all .45s ease;
 }
 .navlist a:hover{
@@ -71,33 +74,33 @@ span{
     color: var(--main-color);
 }
 #menu-icon{
-    font-size: 35px;
+    font-size: 25px;
     color: var(--text-color);
     z-index: 10001;
     cursor: pointer;
-    margin-left: 25px;
+    
     display: none;
 }
 section{
-    padding: 120px 10%;
+    padding: 50px 8% ;
     /* padding: 160px 15% 120px; */
 }
 header.sticky{
    
     border-bottom: 1px solid  rgb(255, 252, 248);
-    padding: 12px 15%;
+    /* padding: 12px 15%; */
 }
 
 /*========================home section==================*/
 .home{
     position: relative;
-   min-height: 100vh;
+   min-height: 60vh;
     width: 100%;
     display: grid;
     grid-template-columns: 0.2fr 1fr 1fr;
     align-items: center;
     gap: 1rem; 
-    padding-top: 100px 100px;
+    padding-top: 150px 100px;
 }
 
 .home-img{
@@ -106,8 +109,7 @@ header.sticky{
 }
 .home-img img{
     width: 100%;
-  
-    height: 80vh;
+ margin-top: 50px;
    border-radius: 30px;
 }
 
@@ -524,6 +526,22 @@ font-weight: 600;
     background: var(--main-color);
 }
 /*======================make it responsive===============*/
+@media (max-width:1536px){
+    header{
+        padding: 12px 2.5%;
+        transition: .1s;
+    }
+    header.sticky{
+        padding: 10px 2.5%;
+        transition: .1s;
+    }
+    section{
+        padding: 70px 3% 60px;
+    }
+    .end{
+        padding: 15px 3%;
+    }
+}
 @media (max-width:1480px){
     header{
         padding: 12px 2.5%;
@@ -534,7 +552,7 @@ font-weight: 600;
         transition: .1s;
     }
     section{
-        padding: 110px 3% 60px;
+        padding: 70px 3% 60px;
     }
     .end{
         padding: 15px 3%;
@@ -550,18 +568,21 @@ font-weight: 600;
     .home-text h3{
         font-size: 2.5rem;
     }
-    .home{
+    /* .home{
         height: 100vh;
        
-    }
+    } */
 
 }
-@media(max-width:991PX){
+@media(max-width:991px){
+    .home .social{
+        flex-direction: column;
+      }
     header{
         padding: 18px 4%;
     }
     section{
-        padding: 50px 4%;
+        padding: 100px 4%;
     }
     .about{
         flex-direction: column;
@@ -577,13 +598,27 @@ font-weight: 600;
         margin-top: -100px;
 
     }
+
     
     .contact{
         grid-template-columns: 1fr;
     }
    
 }
+@media (max-width:780px){
+    :root{
+        --big-fot:2.4rem;
+        --h2-font:2.5rem;
+        --p-font:1.5rem;
+        transition: .1s;
+    }}
 @media(max-width: 840px){
+    section{
+        padding: 100px 4%;
+    }
+    .home .social{
+      flex-direction: row;
+    }
     #menu-icon{
         display: block;
      }
