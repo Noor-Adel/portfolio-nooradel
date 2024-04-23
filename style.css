@@ -101,7 +101,7 @@ header.sticky{
     align-items: center;
     gap: 1rem; 
     padding-top:6%;
-    background-color: #74553d;
+    /* background-color: #74553d; */
 }
 
 .home-img{
